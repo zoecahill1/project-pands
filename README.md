@@ -7,7 +7,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>This data set was first introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis. For his work in statistics, he has been described as "a genius who almost single-handedly created the foundations for modern statistical science" and "the single most important figure in 20th century statistics". </p>
 
-![Ronald Fisher](/images/RFisher.jpg)
+![Ronald Fisher](/images/RFisher.JPG)
 
 <p>This data set has 150 objects of 3 different classes and 4 features. The 3 different classes of different species of the North American *Iris* flower (*Iris setosa, I. virginica* and *I. ersicolor* ). It has 50 numeric values for each of the 3 species (in cm); 
 1. sepal length 
