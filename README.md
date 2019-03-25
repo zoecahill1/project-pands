@@ -10,6 +10,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 ![Ronald Fisher](/images/RFisher.JPG)
 
 <p>This data set has 150 objects of 3 different classes and 4 features. The 3 different classes of different species of the North American *Iris* flower (*Iris setosa, I. virginica* and *I. ersicolor* ).[1] It has 50 numeric values for each of the 3 species (in cm); 
+
 1. sepal length 
 2. sepal width 
 3. petal length 
