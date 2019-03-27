@@ -12,6 +12,7 @@ data = pd.read_csv("res/iris.csv", sep=",")
 
 # Prints first 5 entries
 print (data.head())
+print ("")
 
 # Adding column headings as orignal has none and read.csv()
 # takes first line of file as headings
@@ -20,6 +21,7 @@ data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Lengt
 # Print 5 sample entries from dataframe to check in
 # correct format
 print (data1.sample(5))
+print ("")
 
 # Prints the total number of entries in the dataframe
 # print ("Total number of entries:", data1.Flower.count())
@@ -27,11 +29,13 @@ print (data1.sample(5))
 # Shape will count the number of rows and columns in the dataset
 shape = data1.shape
 print ("The data set has", shape[0], "rows and", shape[1], "columns" )
+print("")
 
 # Lists the specific data types of each column
 # This data type object (dtype) informs us about the layout of the array
 print ("Each columns data type is listed as follows: " )
 print (data1.dtypes)
+print ("")
 
 # Values_counts counts the distinct entries in the column Flowers
 print("List of the different species and how many entries each has: ")
@@ -43,6 +47,8 @@ print( data1["Flower"].value_counts())
 # By default the lower percentile is 25 and the upper percentile is 75. 
 # The 50 percentile is the same as the median.
 table = data1.describe()
+print ("")
+print ("Summary of statistical data")
 print(table)
 
 # Writes table to csv file
