@@ -7,12 +7,14 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from bokeh.plotting import figure, output_file, show
 
+# Using pandas to load data as a dataframe from iris.csv
+data = pd.read_csv("res/iris.csv", sep=",")
 data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Flower"])
 
 def readData():
-    # Using pandas to load data as a dataframe from iris.csv
-    data = pd.read_csv("res/iris.csv", sep=",")
+
 
     # Prints first 5 entries
     print (data.head())
@@ -145,3 +147,97 @@ def plotBoxPlot():
     plt.title(title, fontsize=20)
     plt.savefig('res/BoxPlotPetWid.jpg')
     plt.close()
+
+# in progress
+def plotCurves():
+
+    sns.FacetGrid(data1, hue='Flower', size=6) \
+    .map(sns.kdeplot, 'Sepal Length (cm)') \
+    .add_legend()
+
+    sns.FacetGrid(data1, hue='Flower', size=6) \
+    .map(sns.kdeplot, 'Sepal Width (cm)') \
+    .add_legend()
+
+    sns.FacetGrid(data1, hue='Flower', size=6) \
+    .map(sns.kdeplot, 'Petal Length (cm)') \
+    .add_legend()
+
+    sns.FacetGrid(data1, hue='Flower', size=6) \
+    .map(sns.kdeplot, 'Petal Width (cm)') \
+    .add_legend()
+
+    plt.show()
+
+# Using bokeh library to generate scatter plot of 
+# Had difficulty using plt.scatter bokeh was much easier to use
+# And to style, although could not get legend to show so for refrence
+# setosa = blue, versicolor = red, virginica = green
+# https://bokeh.pydata.org/en/latest/docs/user_guide.html
+
+# Comparing Petal Width and Petal Length of different flowers
+def plotScatterPetals():
+    output_file("scatterPlotPetals.html")
+
+    # Adding colours to various flowers as default is all the same colour
+    colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
+    colors = [colormap[x] for x in data1['Flower']]
+
+    # Setting title and x, y axis labels
+    graph = figure(title = "Petal Width and Petal Length")
+    graph.xaxis.axis_label = 'Petal Length (cm)'
+    graph.yaxis.axis_label = 'Petal Width (cm)'
+
+    # Graphing the data - increased the dot size for readablity
+    # Refrenced: https://bokeh.pydata.org/en/latest/docs/reference/models/markers/circle.html
+    graph.circle(data1["Petal Length (cm)"], data1["Petal Width (cm)"], size = 12, color=colors)
+
+    show(graph)
+
+# Comparing Sepal Width and Speal Length of different flowers
+def plotScatterSepals():
+    output_file("scatterPlotSepals.html")
+
+    # Adding colours to various flowers as default is all the same colour
+    colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
+    colors = [colormap[x] for x in data1['Flower']]
+
+    # Setting title and x, y axis labels
+    graph = figure(title = "Sepal Width and Sepal Length")
+    graph.xaxis.axis_label = 'Sepal Length (cm)'
+    graph.yaxis.axis_label = 'Sepal Width (cm)'
+
+    graph.circle(data1["Sepal Length (cm)"], data1["Sepal Width (cm)"], size = 12, color=colors)
+
+    show(graph)
+
+# Comparing Sepal Width and Petal Length of different flowers
+def plotScatterSepWidPetLen():
+    output_file("scatterPlotSepWidPetLen.html")
+
+    colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
+    colors = [colormap[x] for x in data1['Flower']]
+
+    graph = figure(title = "Sepal Width and Petal Length")
+    graph.xaxis.axis_label = 'Sepal Width (cm)'
+    graph.yaxis.axis_label = 'Petal Length (cm)'
+
+    graph.circle(data1["Sepal Width (cm)"], data1["Petal Length (cm)"], size = 12, color=colors)
+
+    show(graph)
+
+
+# Comparing Sepal Length and Petal Width of different flowers
+def plotScatterSepLenPetWid():
+    output_file("scatterPlotSepLenPetWid.html")
+
+    colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
+    colors = [colormap[x] for x in data1['Flower']]
+
+    graph = figure(title = "Sepal Length and Petal Width")
+    graph.xaxis.axis_label = 'Sepal Length (cm)'
+    graph.yaxis.axis_label = 'Petal Width (cm)'
+
+    graph.circle(data1["Sepal Length (cm)"], data1["Petal Width (cm)"], size = 12, color=colors)
+
+    show(graph)

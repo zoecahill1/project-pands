@@ -1,7 +1,7 @@
 import analysis
 
 def main():
-    analysis.plotBoxPlot()
+    analysis.plotScatterSepLenPetWid()
 
 if __name__ == "__main__":
     main()
