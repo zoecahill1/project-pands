@@ -1,7 +1,7 @@
 import analysis
 
 def main():
-    analysis.listSpecies()
+    analysis.plotHistogram()
 
 if __name__ == "__main__":
     main()

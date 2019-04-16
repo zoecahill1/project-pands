@@ -29,3 +29,5 @@ This repository contains my solutions to the Problem Set for the module Programm
 5. [Data36 Pandas Tutorial](https://data36.com/pandas-tutorial-1-basics-reading-data-files-dataframes-data-selection/)
 6. [Geek for Geeks Data Science Tutorial](https://www.geeksforgeeks.org/python-for-data-science/)
 7. [Offical Pandas Documentation](http://pandas.pydata.org/pandas-docs/version/0.21/generated/pandas.DataFrame.describe.html )
+8. [Stack Overflow - Plotting Multiple Histograms](https://stackoverflow.com/questions/29530355/plotting-multiple-histograms-in-grid)
+9. [Real Python - Plotting Histograms](https://realpython.com/python-histograms/)

@@ -55,7 +55,44 @@ def listSpecies():
     print ("")
     print ("Summary of statistical data")
     print(table)
-
-def writeTabletoCSV():
-    # Writes table to csv file
+    # Writes results to csv file
     table.to_csv("res/table.csv")
+
+def plotHistogram():
+    # This function will create histograms of  the examined alphas grouped by flower.  
+    # This will help us to idenitify differences between each flower by their features. 
+
+    # Produce a list called columns of the column headings to iterate through with enumerate
+    columns = list(data1[['Sepal Width (cm)','Sepal Length (cm)','Petal Width (cm)','Petal Length (cm)']])
+
+    # Adapted from https://stackoverflow.com/questions/29530355/plotting-multiple-histograms-in-grid
+    # For statement to produce multiple histograms in a grid.
+
+    for i, alpha in enumerate(columns):
+        # (num_of_rows, num_of_columns, i + 1)
+        plt.subplot(2, 2, i + 1)
+        plt.hist(colHist(alpha)[0], alpha=0.6, label='setosa')
+        plt.hist(colHist(alpha)[1], alpha=0.6, label='versicolor')
+        plt.hist(colHist(alpha)[2], alpha=0.6, label='virginica')
+        plt.legend(loc='upper right', fontsize=6)
+        plt.xlabel("Measurements in cm")
+        plt.ylabel("Number of flowers")
+        plt.title(alpha)
+    # Improves spacing of graphs otherwise they overlap
+    plt.tight_layout(pad=0.5, w_pad=0.5, h_pad=1.0)
+    # Save figure to res file
+    plt.savefig('res/Histogram.jpg') 
+    # Closes generator for next figure to be drawn
+    plt.close()
+
+# Function to group each feature by their flower
+def colHist(col):
+    # The features we will graph as petal length and width, sepal length and width
+    # So
+    setosa = data1[data1['Flower'] == 'Iris-setosa'][col]
+    versicolor = data1[data1['Flower'] == 'Iris-versicolor'][col]
+    virginica = data1[data1['Flower'] == 'Iris-virginica'][col]
+    return setosa, versicolor, virginica
+
+
+
