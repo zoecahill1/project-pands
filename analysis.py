@@ -6,6 +6,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Flower"])
 
@@ -100,5 +101,47 @@ def colHist(col):
     virginica = data1[data1['Flower'] == 'Iris-virginica'][col]
     return setosa, versicolor, virginica
 
+# Function to plot box plots for various features
+# Refrenced throughout:
+# https://www.tutorialspoint.com/seaborn/index.html
+# https://seaborn.pydata.org/tutorial.html
+def plotBoxPlot():
 
+    # Adding white grid for readablity
+    sns.set(style="whitegrid")
 
+    # Plot boxplot using type of flowers for x and sepal length for y.
+    sns.boxplot(x="Flower", y="Sepal Length (cm)", data=data1)
+
+    title = "Distributions of Sepal Length"
+    # Increased font size for readablity
+    plt.title(title, fontsize=20)
+
+    # Saves the plot
+    plt.savefig('res/BoxPlotSepLen.jpg')
+    # Clears plt for next figure
+    plt.close()
+
+    # Box Plot for Sepal Width
+    sns.set(style="whitegrid")
+    sns.boxplot(x="Flower", y="Sepal Width (cm)", data=data1)
+    title = "Distributions of Sepal Width"
+    plt.title(title, fontsize=20)
+    plt.savefig('res/BoxPlotSepWid.jpg')
+    plt.close()
+
+    # Box Plot for Petal Length
+    sns.set(style="whitegrid")
+    sns.boxplot(x="Flower", y="Petal Length (cm)", data=data1)
+    title = "Distributions of Petal Length"
+    plt.title(title, fontsize=20)
+    plt.savefig('res/BoxPlotPetLen.jpg')
+    plt.close()
+
+    # Box Plot for Petal Width
+    sns.set(style="whitegrid")
+    sns.boxplot(x="Flower", y="Petal Width (cm)", data=data1)
+    title = "Distributions of Petal Width"
+    plt.title(title, fontsize=20)
+    plt.savefig('res/BoxPlotPetWid.jpg')
+    plt.close()

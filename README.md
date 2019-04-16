@@ -31,3 +31,6 @@ This repository contains my solutions to the Problem Set for the module Programm
 7. [Offical Pandas Documentation](http://pandas.pydata.org/pandas-docs/version/0.21/generated/pandas.DataFrame.describe.html )
 8. [Stack Overflow - Plotting Multiple Histograms](https://stackoverflow.com/questions/29530355/plotting-multiple-histograms-in-grid)
 9. [Real Python - Plotting Histograms](https://realpython.com/python-histograms/)
+10. [Tutorials Point - Seaborn Tutorial](https://www.tutorialspoint.com/seaborn/index.html)
+11. [Offical Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
+

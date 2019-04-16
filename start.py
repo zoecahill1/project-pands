@@ -1,7 +1,7 @@
 import analysis
 
 def main():
-    analysis.plotHistogram()
+    analysis.plotBoxPlot()
 
 if __name__ == "__main__":
     main()
