@@ -59,25 +59,31 @@ def listSpecies():
     table.to_csv("res/table.csv")
 
 def plotHistogram():
-    # This function will create histograms of  the examined alphas grouped by flower.  
+    # This function will create histograms of the examined features grouped by flower.  
     # This will help us to idenitify differences between each flower by their features. 
 
-    # Produce a list called columns of the column headings to iterate through with enumerate
+    # Produce a list called columns from the column headings in the data frame to iterate through with enumerate
     columns = list(data1[['Sepal Width (cm)','Sepal Length (cm)','Petal Width (cm)','Petal Length (cm)']])
 
     # Adapted from https://stackoverflow.com/questions/29530355/plotting-multiple-histograms-in-grid
     # For statement to produce multiple histograms in a grid.
-
+    # To do this we use a for statement and the enumerate function to 
+    # loop over the columns list and have a counter with the group by function colHist()
     for i, alpha in enumerate(columns):
         # (num_of_rows, num_of_columns, i + 1)
+        # Adapted from: https://realpython.com/python-histograms/
         plt.subplot(2, 2, i + 1)
+        # Plots histogram on lists from called function
         plt.hist(colHist(alpha)[0], alpha=0.6, label='setosa')
         plt.hist(colHist(alpha)[1], alpha=0.6, label='versicolor')
         plt.hist(colHist(alpha)[2], alpha=0.6, label='virginica')
+        # Reduced font size to avoid blocking graph data
         plt.legend(loc='upper right', fontsize=6)
+        # X and Y labels
         plt.xlabel("Measurements in cm")
         plt.ylabel("Number of flowers")
         plt.title(alpha)
+
     # Improves spacing of graphs otherwise they overlap
     plt.tight_layout(pad=0.5, w_pad=0.5, h_pad=1.0)
     # Save figure to res file
@@ -88,7 +94,7 @@ def plotHistogram():
 # Function to group each feature by their flower
 def colHist(col):
     # The features we will graph as petal length and width, sepal length and width
-    # So
+    # So we must group these by flower
     setosa = data1[data1['Flower'] == 'Iris-setosa'][col]
     versicolor = data1[data1['Flower'] == 'Iris-versicolor'][col]
     virginica = data1[data1['Flower'] == 'Iris-virginica'][col]
