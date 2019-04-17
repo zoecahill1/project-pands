@@ -29,15 +29,15 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>Next step is to import the dataset:
 
-![Importing Data](/images/readData.PNG)</p>
+![Importing Data](/images/readData.png)</p>
 
 <p>Now that the data has been imported we can begin to investigate it.
 
-![First entries](/images/headTable.PNG)</p>
+![First entries](/images/headTable.png)</p>
 
 <p>As we can see the first 4 variables are measurements in centimeters. All of these flowers were measured in the same location, the same instrument to measure and all taken by the same person so they are consistent. This data was used by Fisher to see if he could identify the type of flower only by taking measurement of the sepals or petals. It must be useful for us to see exactly what sepals and petals are so have a look at this diagram:
 
-![Petals/Sepal Diagram](/images/petal_sepal_label.PNG) </p>
+![Petals/Sepal Diagram](/images/petal_sepal_label.png) </p>
 
 <p>So the petals are the usually coloured part that covers the inner part of the flower. The speals are the usually green base that holds the flowers</p>
 
