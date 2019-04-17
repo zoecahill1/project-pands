@@ -28,26 +28,26 @@ This repository contains my solutions to the Problem Set for the module Programm
 3. [Matplotlib](https://matplotlib.org/) - is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms</p>
 
 <p>Next step is to import the dataset:
-[Importing Data](/images/readData.PNG)</p>
+![Importing Data](/images/readData.PNG)</p>
 <p>Now that the data has been imported we can begin to investigate it.
-[First entries](/images/headTable.PNG)</p>
+![First entries](/images/headTable.PNG)</p>
 <p>As we can see the first 4 variables are measurements in centimeters. All of these flowers were measured in the same location, the same instrument to measure and all taken by the same person so they are consistent. This data was used by Fisher to see if he could identify the type of flower only by taking measurement of the sepals or petals. It must be useful for us to see exactly what sepals and petals are so have a look at this diagram:
-[Petals/Sepal Diagram](/images/petal_sepal_label.PNG) </p>
+![Petals/Sepal Diagram](/images/petal_sepal_label.PNG) </p>
 <p>So the petals are the usually coloured part that covers the inner part of the flower. The speals are the usually green base that holds the flowers</p>
 
 ## Summary Statistical Table
 <p>This is a general overview of statics relating to dataset. </p>
-[Summary](/res/table.csv)
+![Summary](/res/table.csv)
 <p>From this table the biggest observation we can see is that there is huge variance in the speal length and petal length. Next we will look at boxplots and scatter plots to actually visualise the data</p>
 
 ## Box Plots
 <p>We will first look at how spread out these values are: 
-[General Box Plot](/res/genBoxPlot.jpg)</p>
+![General Box Plot](/res/genBoxPlot.jpg)</p>
 <p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages. We will next look further into the dataset grouping by the specifc flowers in the dataset.</p>
-[Box Plot - Petal Length](/res/BoxPlotPetLen.jpg)
-[Box Plot - Petal Width](/res/BoxPlotPetWid.jpg)
-[Box Plot - Sepal Length](/res/BoxPlotSepLen.jpg)
-[Box Plot - Sepal Width](/res/BoxPlotSepWidth.jpg)
+![Box Plot - Petal Length](/res/BoxPlotPetLen.jpg)
+![Box Plot - Petal Width](/res/BoxPlotPetWid.jpg)
+![Box Plot - Sepal Length](/res/BoxPlotSepLen.jpg)
+![Box Plot - Sepal Width](/res/BoxPlotSepWidth.jpg)
 
 
 
