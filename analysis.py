@@ -177,7 +177,7 @@ def plotCurves():
 
 # Comparing Petal Width and Petal Length of different flowers
 def plotScatterPetals():
-    output_file("scatterPlotPetals.html")
+    output_file("res/scatterPlotPetals.html")
 
     # Adding colours to various flowers as default is all the same colour
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
@@ -196,13 +196,11 @@ def plotScatterPetals():
 
 # Comparing Sepal Width and Speal Length of different flowers
 def plotScatterSepals():
-    output_file("scatterPlotSepals.html")
+    output_file("res/scatterPlotSepals.html")
 
-    # Adding colours to various flowers as default is all the same colour
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
 
-    # Setting title and x, y axis labels
     graph = figure(title = "Sepal Width and Sepal Length")
     graph.xaxis.axis_label = 'Sepal Length (cm)'
     graph.yaxis.axis_label = 'Sepal Width (cm)'
@@ -213,7 +211,7 @@ def plotScatterSepals():
 
 # Comparing Sepal Width and Petal Length of different flowers
 def plotScatterSepWidPetLen():
-    output_file("scatterPlotSepWidPetLen.html")
+    output_file("res/scatterPlotSepWidPetLen.html")
 
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
@@ -229,7 +227,7 @@ def plotScatterSepWidPetLen():
 
 # Comparing Sepal Length and Petal Width of different flowers
 def plotScatterSepLenPetWid():
-    output_file("scatterPlotSepLenPetWid.html")
+    output_file("res/scatterPlotSepLenPetWid.html")
 
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
