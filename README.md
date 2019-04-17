@@ -53,12 +53,14 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![General Box Plot](/res/genBoxPlot.jpg)</p>
 
-<p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages. We will next look further into the dataset grouping by the specifc flowers in the dataset.</p>
+<p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages. We will next look further into the dataset grouping by the specific flowers in the dataset.</p>
 
 ![Box Plot - Petal Length](/res/BoxPlotPetLen.jpg)
 ![Box Plot - Petal Width](/res/BoxPlotPetWid.jpg)
 ![Box Plot - Sepal Length](/res/BoxPlotSepLen.jpg)
-![Box Plot - Sepal Width](/res/BoxPlotSepWidth.jpg)
+![Box Plot - Sepal Width](/res/BoxPlotSepWid.jpg)
+
+<p>Looking at all of the plots, we can see that there are distinct differences between the Petal Length and Petal Width. Sepal Length to a lesser extent and sepal width seems to be the most similar across flowers. Each of the different flowers has petal length and width that are very distinct across the various types. They are much closer together for the sepal measurements across the various flowers</p>
 
 
 
