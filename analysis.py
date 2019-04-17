@@ -4,10 +4,8 @@
 # Data Set downloaded from: https://archive.ics.uci.edu/ml/datasets/iris
 
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from bokeh.plotting import figure, output_file, show
 import matplotlib.patches as mpatches
 
 # Using pandas to load data as a dataframe from iris.csv
@@ -29,7 +27,7 @@ def readData():
 
     # Print 5 sample entries from dataframe to check in
     # correct format
-    print (data1.sample(5))
+    print (data1.sample(10))
     print ("")
 
 def describeData():
