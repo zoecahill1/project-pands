@@ -8,6 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from bokeh.plotting import figure, output_file, show
+import matplotlib.patches as mpatches
 
 # Using pandas to load data as a dataframe from iris.csv
 data = pd.read_csv("res/iris.csv", sep=",")
@@ -169,77 +170,101 @@ def plotCurves():
 
     plt.show()
 
-# Using bokeh library to generate scatter plot of 
-# Had difficulty using plt.scatter bokeh was much easier to use
-# And to style, although could not get legend to show so for refrence
-# setosa = blue, versicolor = red, virginica = green
-# https://bokeh.pydata.org/en/latest/docs/user_guide.html
-
-# Comparing Petal Width and Petal Length of different flowers
-def plotScatterPetals():
-    output_file("res/scatterPlotPetals.html")
-
-    # Adding colours to various flowers as default is all the same colour
+# Generating scatter plots to show that there is distinct difference in sizes between the species
+# This function will graph sepal width and sepal length
+def scatterSepal():
+    # Generating data for x axis
+    x = list(data1['Sepal Length (cm)'])
+    # Generating data for y axis
+    y = list(data1['Sepal Width (cm)'])
+    
+    # Generating map for different flowers as default will have them all the same colour
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
 
-    # Setting title and x, y axis labels
-    graph = figure(title = "Petal Width and Petal Length")
-    graph.xaxis.axis_label = 'Petal Length (cm)'
-    graph.yaxis.axis_label = 'Petal Width (cm)'
+    # Specifying axis and colors for dataset
+    plt.scatter(x, y, c=colors)
 
-    # Graphing the data - increased the dot size for readablity
-    # Refrenced: https://bokeh.pydata.org/en/latest/docs/reference/models/markers/circle.html
-    graph.circle(data1["Petal Length (cm)"], data1["Petal Width (cm)"], size = 12, color=colors)
+    # Labelling x and y axis and specifying title for graph
+    plt.xlabel("Sepal Length (cm)")
+    plt.ylabel("Sepal Width (cm)")
+    plt.title("Sepal Length and Sepal Width")
+    
+    # Adapted from: https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib
+    # Had to manually make legend
+    patchList = []
+    for key in colormap:
+        data_key = mpatches.Patch(color=colormap[key], label=key)
+        patchList.append(data_key)
 
-    # Will generate a HTML file with graph
-    # For simplicity I screenshot the results for use in analysis later
-    # Note the html file is an interactive graph which can be very useful for other
-    # data sets but for our purposes that interaction is not necessary
-    show(graph)
+    # Specifying handles and position of legend. Reduced font
+    # size to stop legend blocking some data
+    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
+    # Saving file to res folder
+    plt.savefig('res/scatterSepal.jpg') 
 
-# Comparing Sepal Width and Speal Length of different flowers
-def plotScatterSepals():
-    output_file("res/scatterPlotSepals.html")
-
+# This function will graph petal length and petal width
+def scatterPetal():
+    x = list(data1['Petal Length (cm)'])
+    y = list(data1['Petal Width (cm)'])
+    
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
 
-    graph = figure(title = "Sepal Width and Sepal Length")
-    graph.xaxis.axis_label = 'Sepal Length (cm)'
-    graph.yaxis.axis_label = 'Sepal Width (cm)'
+    plt.scatter(x, y, c=colors)
 
-    graph.circle(data1["Sepal Length (cm)"], data1["Sepal Width (cm)"], size = 12, color=colors)
+    plt.xlabel("Petal Length (cm)")
+    plt.ylabel("Petal Width (cm)")
+    plt.title("Petal Length and Petal Width")
+    
+    patchList = []
+    for key in colormap:
+        data_key = mpatches.Patch(color=colormap[key], label=key)
+        patchList.append(data_key)
 
-    show(graph)
-
-# Comparing Sepal Width and Petal Length of different flowers
-def plotScatterSepWidPetLen():
-    output_file("res/scatterPlotSepWidPetLen.html")
-
+# This function will graph sepal length and petal width
+def scatterSepLenPetWid():
+    x = list(data1['Sepal Length (cm)'])
+    y = list(data1['Petal Width (cm)'])
+    
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
 
-    graph = figure(title = "Sepal Width and Petal Length")
-    graph.xaxis.axis_label = 'Sepal Width (cm)'
-    graph.yaxis.axis_label = 'Petal Length (cm)'
+    plt.scatter(x, y, c=colors)
 
-    graph.circle(data1["Sepal Width (cm)"], data1["Petal Length (cm)"], size = 12, color=colors)
+    plt.xlabel("Sepal Length (cm)")
+    plt.ylabel("Petal Width (cm)")
+    plt.title("Sepal Length and Petal Width")
+    
+    patchList = []
+    for key in colormap:
+        data_key = mpatches.Patch(color=colormap[key], label=key)
+        patchList.append(data_key)
 
-    show(graph)
+    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
+    plt.savefig('res/scatterSepLenPetWid.jpg') 
 
+    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
+    plt.savefig('res/scatterPetal.jpg') 
 
-# Comparing Sepal Length and Petal Width of different flowers
-def plotScatterSepLenPetWid():
-    output_file("res/scatterPlotSepLenPetWid.html")
-
+# This function will grpah sepal width to petal length
+def scatterSepWidPetLen():
+    x = list(data1['Sepal Width (cm)'])
+    y = list(data1['Petal Length (cm)'])
+    
     colormap = {'Iris-setosa': 'blue', 'Iris-versicolor': 'red', 'Iris-virginica': 'green'}
     colors = [colormap[x] for x in data1['Flower']]
 
-    graph = figure(title = "Sepal Length and Petal Width")
-    graph.xaxis.axis_label = 'Sepal Length (cm)'
-    graph.yaxis.axis_label = 'Petal Width (cm)'
+    plt.scatter(x, y, c=colors)
 
-    graph.circle(data1["Sepal Length (cm)"], data1["Petal Width (cm)"], size = 12, color=colors)
+    plt.xlabel("Sepal Width (cm)")
+    plt.ylabel("Petal Length (cm)")
+    plt.title("Sepal Width and Petal Length")
+    
+    patchList = []
+    for key in colormap:
+        data_key = mpatches.Patch(color=colormap[key], label=key)
+        patchList.append(data_key)
 
-    show(graph)
+    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
+    plt.savefig('res/scatterSepWidPetLen.jpg') 
