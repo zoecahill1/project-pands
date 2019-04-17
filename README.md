@@ -34,4 +34,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 10. [Tutorials Point - Seaborn Tutorial](https://www.tutorialspoint.com/seaborn/index.html)
 11. [Offical Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
 12. [Stackoverflow - manually making a legend in matplotlib](https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib)
-
+13. [Pandas - Melting DF](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)

@@ -13,6 +13,8 @@ import matplotlib.patches as mpatches
 # Using pandas to load data as a dataframe from iris.csv
 data = pd.read_csv("res/iris.csv", sep=",")
 data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Flower"])
+# Melts data for use in later graphs ref: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html
+mData = pd.melt(data1, "Flower", var_name="Features")
 
 def readData():
 
@@ -104,6 +106,31 @@ def colHist(col):
     virginica = data1[data1['Flower'] == 'Iris-virginica'][col]
     return setosa, versicolor, virginica
 
+def plotSwarmPlot():
+    # Sets the size of the graph to aid readablity
+    sns.set(rc={'figure.figsize':(10.0,8.0)})
+
+    # Draw a categorical scatterplot
+    sns.swarmplot(x="Features", y="value", hue="Flower", data=mData)
+    # Title of graph
+    plt.title("Swarm Plot of Measurements")
+    # Saves the plot
+    plt.savefig('res/swarmPlot.jpg')
+    # Clears plt for next figure
+    plt.close()
+
+# General Box Plot of all features to visualise spread of data
+def genBoxPlot():
+    # Taking melted data as input
+    sns.boxplot(x="Features", y="value",data=mData)
+    # Labelling y axis
+    plt.ylabel("Measurements in cm")
+    # Setting title
+    plt.title("Boxplot of Measurements")
+    # Saves figure to res file
+    plt.savefig("res/genBoxPlot.jpg")
+    plt.close()
+
 # Function to plot box plots for various features
 # Refrenced throughout:
 # https://www.tutorialspoint.com/seaborn/index.html
@@ -149,26 +176,15 @@ def plotBoxPlot():
     plt.savefig('res/BoxPlotPetWid.jpg')
     plt.close()
 
-# in progress
-def plotCurves():
-
-    sns.FacetGrid(data1, hue='Flower', size=6) \
-    .map(sns.kdeplot, 'Sepal Length (cm)') \
-    .add_legend()
-
-    sns.FacetGrid(data1, hue='Flower', size=6) \
-    .map(sns.kdeplot, 'Sepal Width (cm)') \
-    .add_legend()
-
-    sns.FacetGrid(data1, hue='Flower', size=6) \
-    .map(sns.kdeplot, 'Petal Length (cm)') \
-    .add_legend()
-
-    sns.FacetGrid(data1, hue='Flower', size=6) \
-    .map(sns.kdeplot, 'Petal Width (cm)') \
-    .add_legend()
-
-    plt.show()
+# Pair plot gives us a good overview of the data
+# Will generate multiple graphs across all the different variables
+def pairPlot():
+    # hue will tell sns how to colour code the data 
+    sns.pairplot(data1, hue='Flower')
+    # saves the graph to res file
+    plt.savefig('res/pairplot.jpg')
+    # close the file to clear for next figure
+    plt.close()
 
 # Generating scatter plots to show that there is distinct difference in sizes between the species
 # This function will graph sepal width and sepal length
@@ -268,3 +284,4 @@ def scatterSepWidPetLen():
 
     plt.legend(handles=patchList, loc='upper left', fontsize= 8)
     plt.savefig('res/scatterSepWidPetLen.jpg') 
+
