@@ -192,6 +192,10 @@ def plotScatterPetals():
     # Refrenced: https://bokeh.pydata.org/en/latest/docs/reference/models/markers/circle.html
     graph.circle(data1["Petal Length (cm)"], data1["Petal Width (cm)"], size = 12, color=colors)
 
+    # Will generate a HTML file with graph
+    # For simplicity I screenshot the results for use in analysis later
+    # Note the html file is an interactive graph which can be very useful for other
+    # data sets but for our purposes that interaction is not necessary
     show(graph)
 
 # Comparing Sepal Width and Speal Length of different flowers

@@ -33,4 +33,5 @@ This repository contains my solutions to the Problem Set for the module Programm
 9. [Real Python - Plotting Histograms](https://realpython.com/python-histograms/)
 10. [Tutorials Point - Seaborn Tutorial](https://www.tutorialspoint.com/seaborn/index.html)
 11. [Offical Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
+12. [Bokeh user guide](https://bokeh.pydata.org/en/latest/docs/user_guide.html)
 
