@@ -29,11 +29,11 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>Next step is to import the dataset:
 
-![Importing Data](/images/readData.png)</p>
+![Importing Data](/images/readData.JPG)</p>
 
 <p>Now that the data has been imported we can begin to investigate it.
 
-![First entries](/images/headTable.png)</p>
+![First entries](/images/headTable.JPG)</p>
 
 <p>As we can see the first 4 variables are measurements in centimeters. All of these flowers were measured in the same location, the same instrument to measure and all taken by the same person so they are consistent. This data was used by Fisher to see if he could identify the type of flower only by taking measurement of the sepals or petals. It must be useful for us to see exactly what sepals and petals are so have a look at this diagram:
 
@@ -44,7 +44,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 ## Summary Statistical Table
 <p>This is a general overview of statics relating to dataset. </p>
 
-![Summary](/res/table.csv)
+![Summary](/images/table.JPG)
 
 <p>From this table the biggest observation we can see is that there is huge variance in the speal length and petal length. Next we will look at boxplots and scatter plots to actually visualise the data</p>
 
