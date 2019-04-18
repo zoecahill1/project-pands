@@ -114,7 +114,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>This gives us a good overview of the spread of data</p>
 
-![Swarm Plot](/res/swarmPlot.JPG)
+![Swarm Plot](/res/swarmPlot.jpg)
 
 <p>We can clearly see here that Iris-virginica is the largest flower as it is a the top or nearly the top in each swarm. Also we can see petals have a much bigger difference between then as opposed to the speal measurements.</p>
 
