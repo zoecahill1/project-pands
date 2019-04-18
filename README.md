@@ -157,3 +157,6 @@ This repository contains my solutions to the Problem Set for the module Programm
 13. [Pandas - Melting DF](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
 14. [Wikipedia - Flowers](https://en.wikipedia.org/wiki/Sepal)
 15. [Geek for Geeks - Melt()](https://www.geeksforgeeks.org/python-pandas-melt/)
+16. [Exploring the Iris Dataset](https://medium.com/@livingwithdata/exploring-the-iris-dataset-260cc1e5cdf7)
+17. [Kaggle - scikit learn video](http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machine-learning-first-steps-with-the-iris-dataset/)
+18. [Machine Learning on Iris](https://diwashrestha.com/2017/09/18/machine-learning-on-iris/)
