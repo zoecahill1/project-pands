@@ -55,7 +55,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Petals/Sepal Diagram](/images/petal_sepal_label.png) </p>
 
-<p>So the petals are the usually coloured part that covers the inner part of the flower. The speals are the usually green base that holds the flowers</p>
+<p>So the petals are the usually coloured part that covers the inner part of the flower. The speals are the usually green base that holds the flowers[14]</p>
 
 ## Summary Statistical Table
 <p>This is a general overview of statics relating to dataset. </p>
@@ -94,3 +94,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 11. [Offical Seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
 12. [Stackoverflow - manually making a legend in matplotlib](https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib)
 13. [Pandas - Melting DF](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
+14. [Wikipedia - Flowers](https://en.wikipedia.org/wiki/Sepal)
