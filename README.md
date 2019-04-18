@@ -47,7 +47,11 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Importing Data](/images/readData.JPG)</p>
 
-<p>Now that the data has been imported we can begin to investigate it.
+<p>Now that the data has been imported we can begin to investigate it. 
+
+![Head of date](/images/head.JPG)</p>
+
+<p>This code will show the first 10 lines of the dataset [6]
 
 ![First entries](/images/headTable.JPG)</p>
 
@@ -58,18 +62,31 @@ This repository contains my solutions to the Problem Set for the module Programm
 <p>So the petals are the usually coloured part that covers the inner part of the flower. The speals are the usually green base that holds the flowers[14]</p>
 
 ## Summary Statistical Table
-<p>This is a general overview of statics relating to dataset. </p>
+<p>The best overview of the data is to generate a table of stastical data which we can easily do with python. [6]
+
+![Python Summary](/images/summary.JPG)</p>
+
+<p>This gives us a good starting point for our investigations.</p>
 
 ![Summary](/images/table.JPG)
 
 <p>From this table the biggest observation we can see is that there is huge variance in the speal length and petal length. Next we will look at boxplots and scatter plots to actually visualise the data</p>
 
 ## Box Plots
-<p>We will first look at how spread out these values are: 
+<p>We will first look at how spread out these values are. To do this we can generate a box plot.
 
-![General Box Plot](/res/genBoxPlot.jpg)</p>
+![Box Code](/res/genBox.JPG)</p>
+**note: for this graph the mData used is "melted" data.
+![Melt Data](/images/melt.JPG)
+ Melt() function is useful to massage a DataFrame into a format where one or more columns are identifier variables, while all other columns, considered measured variables, are unpivoted to the row axis, leaving just two non-identifier columns, variable and value [15]
+
+![General Box Plot](/res/genBoxPlot.jpg)
 
 <p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages. We will next look further into the dataset grouping by the specific flowers in the dataset.</p>
+
+![Box Code](/images/boxM.JPG)
+
+<p>This function plots the various features of the flower against each other [10, 11] </p>
 
 ![Box Plot - Petal Length](/res/BoxPlotPetLen.jpg)
 ![Box Plot - Petal Width](/res/BoxPlotPetWid.jpg)
@@ -77,6 +94,18 @@ This repository contains my solutions to the Problem Set for the module Programm
 ![Box Plot - Sepal Width](/res/BoxPlotSepWid.jpg)
 
 <p>Looking at all of the plots, we can see that there are distinct differences between the Petal Length and Petal Width. Sepal Length to a lesser extent and sepal width seems to be the most similar across flowers. Each of the different flowers has petal length and width that are very distinct across the various types. They are much closer together for the sepal measurements across the various flowers</p>
+
+## Histograms
+<p>Next we will look at some histograms to see can we see anything else within the data. For this graph I had to create a seperate function to group each feature by their flower [8, 9]
+
+![Histogram Code](/images/hist.JPG)
+![Grouping Code](/images/group.JPG)</p>
+
+<p>Histograms can help us to see the shape of the distribution of each feature by each flower. This will help us identify any differences between the flowers grouped by their measurements</p>
+
+![Histogram](/res/Histogram.jpg)
+
+<p>From this graph we can see that the setosa seems to have the most distinct features compared to the other two flowers. The setosa also by far has the largest petals (in both width and length). Versicolor and virgincia seem to overlap quite a bit in sepal length and width. There appears to be more of a difference between the two in petal length and width.</p>
 
 
 
@@ -95,3 +124,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 12. [Stackoverflow - manually making a legend in matplotlib](https://stackoverflow.com/questions/39500265/manually-add-legend-items-python-matplotlib)
 13. [Pandas - Melting DF](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html)
 14. [Wikipedia - Flowers](https://en.wikipedia.org/wiki/Sepal)
+15. [Geek for Geeks - Melt()](https://www.geeksforgeeks.org/python-pandas-melt/)
