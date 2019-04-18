@@ -107,6 +107,17 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>From this graph we can see that the setosa seems to have the most distinct features compared to the other two flowers. The setosa also by far has the largest petals (in both width and length). Versicolor and virgincia seem to overlap quite a bit in sepal length and width. There appears to be more of a difference between the two in petal length and width.</p>
 
+## Swarm Plot
+<p>Another good way to get an overview of the data is with a swarm plot. A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution.</p>
+
+![Swarm Code](/images/swarm.JPG)
+
+<p>This gives us a good overview of the spread of data</p>
+
+![Swarm Plot](/res/swarmPlot.JPG)
+
+<p>We can clearly see here that Iris-virginica is the largest flower as it is a the top or nearly the top in each swarm. Also we can see petals have a much bigger difference between then as opposed to the speal measurements.</p>
+
 ## Pair Plot
 <p>Next we will try to take a look at how some of these variables interact. An easy way to get a good overview of this is with a pairplot</p>
 
@@ -137,7 +148,11 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Petal Plot](/res/scatterPetal.jpg)
 
-<p>Examining the graph tells us that these two measurements increase together. Logically that must be true if they did not they would be very long thin petals, or else very short and wide petals. The graph also shows that this is a very good way to differinate between the different flowers.</p>
+<p>Examining the graph tells us that these two measurements increase together. Logically that must be true if they did not they would be very long thin petals, or else very short and wide petals. The graph also shows that this is a very good way to differinate between the different flowers</p>
+
+
+
+
 
 
 
@@ -160,3 +175,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 16. [Exploring the Iris Dataset](https://medium.com/@livingwithdata/exploring-the-iris-dataset-260cc1e5cdf7)
 17. [Kaggle - scikit learn video](http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machine-learning-first-steps-with-the-iris-dataset/)
 18. [Machine Learning on Iris](https://diwashrestha.com/2017/09/18/machine-learning-on-iris/)
+19. [Seaborn - Swarm Plots](https://seaborn.pydata.org/generated/seaborn.swarmplot.html)
