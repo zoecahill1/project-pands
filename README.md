@@ -121,7 +121,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 ## Scatter Plots
 <p>Firstly we will look at whether there is any relationship between sepal length and width. Coding this was a little tricky. I had to create a colourmap to make the graph readable and then maunally make a legend rather than have the computer generate one [12]</p>
 
-![Scatter Sepal Code](/images/scatterSepal.jpg)
+![Scatter Sepal Code](/images/scatterSepal.JPG)
 
 <p>Look at the scatter plots we can make some observations about the data</p>
 
@@ -131,7 +131,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>Next we will look at the relationship between petal length and width. Coding this was much the same processs as the previous graph.</p>
 
-![Scatter Petal](/images/scatterPetal.jpg)
+![Scatter Petal](/images/scatterPetal.JPG)
 
 <p>So looking at the relationship between petal length and width we can make some observations.</p>
 
