@@ -238,6 +238,9 @@ def scatterPetal():
         data_key = mpatches.Patch(color=colormap[key], label=key)
         patchList.append(data_key)
 
+    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
+    plt.savefig('res/scatterPetal.jpg') 
+
 # This function will produce a scatter plot of sepal length and petal width
 def scatterSepLenPetWid():
     x = list(data1['Sepal Length (cm)'])
@@ -259,9 +262,6 @@ def scatterSepLenPetWid():
 
     plt.legend(handles=patchList, loc='upper left', fontsize= 8)
     plt.savefig('res/scatterSepLenPetWid.jpg') 
-
-    plt.legend(handles=patchList, loc='upper left', fontsize= 8)
-    plt.savefig('res/scatterPetal.jpg') 
 
 # This function will produce a scatter plot of sepal width to petal length
 def scatterSepWidPetLen():

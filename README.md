@@ -107,6 +107,38 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>From this graph we can see that the setosa seems to have the most distinct features compared to the other two flowers. The setosa also by far has the largest petals (in both width and length). Versicolor and virgincia seem to overlap quite a bit in sepal length and width. There appears to be more of a difference between the two in petal length and width.</p>
 
+## Pair Plot
+<p>Next we will try to take a look at how some of these variables interact. An easy way to get a good overview of this is with a pairplot</p>
+
+![Pair Plot Code](/images/pair.JPG)
+
+<p>This gives us a great overview and allows us to better visualise the data thereby allowing us to make important observations about the data.</p>
+
+![Pair Plot](/res/pairplot.jpg)
+
+<p>Let's look a little but closer a some of these scatter plots</p>
+
+## Scatter Plots
+<p>Firstly we will look at whether there is any relationship between sepal length and width. Coding this was a little tricky. I had to create a colourmap to make the graph readable and then maunally make a legend rather than have the computer generate one [12]</p>
+
+![Scatter Sepal Code](/images/scatterSepal.jpg)
+
+<p>Look at the scatter plots we can make some observations about the data</p>
+
+![Scatter Speal](/res/scatterSepal.jpg)
+
+<p>Iris-Setosa appears to be the only flower that differs in a distinctive way in terms of speal length and width. However Iris-versicolor and Iris-virginica appear a little more varied and mixed together</p>
+
+<p>Next we will look at the relationship between petal length and width. Coding this was much the same processs as the previous graph.</p>
+
+![Scatter Petal](/images/scatterPetal.jpg)
+
+<p>So looking at the relationship between petal length and width we can make some observations.</p>
+
+![Petal Plot](/res/scatterPetal.jpg)
+
+<p>Examining the graph tells us that these two measurements increase together. Logically that must be true if they did not they would be very long thin petals, or else very short and wide petals. The graph also shows that this is a very good way to differinate between the different flowers.</p>
+
 
 
 ## References
