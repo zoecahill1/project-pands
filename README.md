@@ -3,6 +3,22 @@
 This repository contains my solutions to the Problem Set for the module Programming and Scripting at GMIT.
 [See here for the instructions](https://github.com/ianmcloughlin/problems-pands-2019/raw/master/problems.pdf)
 
+## How to Download the Repository
+1. On GitHub, navigate to the main page of the repository.
+2. Under the repository name, click Clone or download.
+3. In the Clone with HTTPs section, click to copy the clone URL for the repository.
+4. Open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL you copied in Step 2.
+7. Press Enter. Your local clone will be created.
+
+## How to Run the Code
+1. Make sure you have python v. 3.7 installed. This can be downloaded here from the [anaconda website.](https://www.anaconda.com/distribution/)
+2. Run command line.
+3. Navigate to where you have the files saved in your directory.
+4. Open start.py and follow instructions in comments to change function name.
+5. Type python followed by the start.py to run the program. All functions are in analysis.py and what they do is list above the first line as a comment.
+
 ## What is Fisher's Iris Data Set?
 
 <p>This data set was first introduced by the British statistician and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.[2] For his work in statistics, he has been described as "a genius who almost single-handedly created the foundations for modern statistical science" and "the single most important figure in 20th century statistics".[3] </p>

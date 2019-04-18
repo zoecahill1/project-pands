@@ -10,26 +10,25 @@ import matplotlib.patches as mpatches
 
 # Using pandas to load data as a dataframe from iris.csv
 data = pd.read_csv("res/iris.csv", sep=",")
+# Adding column headings as orignal has none and read.csv()
+# takes first line of file as headings
 data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Flower"])
 # Melts data for use in later graphs ref: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html
 mData = pd.melt(data1, "Flower", var_name="Features")
 
+# Function prints head of data and random sample of data
 def readData():
-
 
     # Prints first 5 entries
     print (data.head())
     print ("")
-
-    # Adding column headings as orignal has none and read.csv()
-    # takes first line of file as headings
-    data1 = pd.read_csv("res/iris.csv", sep=",", header = None, names= ["Sepal Length (cm)", "Sepal Width (cm)", "Petal Length (cm)", "Petal Width (cm)", "Flower"])
 
     # Print 5 sample entries from dataframe to check in
     # correct format
     print (data1.sample(10))
     print ("")
 
+# Function looks at shape of data and data types
 def describeData():
     # Prints the total number of entries in the dataframe
     # print ("Total number of entries:", data1.Flower.count())
@@ -45,6 +44,7 @@ def describeData():
     print (data1.dtypes)
     print ("")
 
+# Function counts distint entries in columns and generates tables of statistical data
 def listSpecies():
     # Values_counts counts the distinct entries in the column Flowers
     print("List of the different species and how many entries each has: ")
@@ -62,6 +62,7 @@ def listSpecies():
     # Writes results to csv file
     table.to_csv("res/table.csv")
 
+# Function to plot histogram of features grouped by type of flower
 def plotHistogram():
     # This function will create histograms of the examined features grouped by flower.  
     # This will help us to idenitify differences between each flower by their features. 
@@ -104,6 +105,7 @@ def colHist(col):
     virginica = data1[data1['Flower'] == 'Iris-virginica'][col]
     return setosa, versicolor, virginica
 
+# Function to generate swarm plot of data
 def plotSwarmPlot():
     # Sets the size of the graph to aid readablity
     sns.set(rc={'figure.figsize':(10.0,8.0)})
@@ -185,7 +187,7 @@ def pairPlot():
     plt.close()
 
 # Generating scatter plots to show that there is distinct difference in sizes between the species
-# This function will graph sepal width and sepal length
+# This function will produce a scatter plot of sepal width and sepal length
 def scatterSepal():
     # Generating data for x axis
     x = list(data1['Sepal Length (cm)'])
@@ -217,7 +219,7 @@ def scatterSepal():
     # Saving file to res folder
     plt.savefig('res/scatterSepal.jpg') 
 
-# This function will graph petal length and petal width
+# This function will produce a scatter plot of petal length and petal width
 def scatterPetal():
     x = list(data1['Petal Length (cm)'])
     y = list(data1['Petal Width (cm)'])
@@ -236,7 +238,7 @@ def scatterPetal():
         data_key = mpatches.Patch(color=colormap[key], label=key)
         patchList.append(data_key)
 
-# This function will graph sepal length and petal width
+# This function will produce a scatter plot of sepal length and petal width
 def scatterSepLenPetWid():
     x = list(data1['Sepal Length (cm)'])
     y = list(data1['Petal Width (cm)'])
@@ -261,7 +263,7 @@ def scatterSepLenPetWid():
     plt.legend(handles=patchList, loc='upper left', fontsize= 8)
     plt.savefig('res/scatterPetal.jpg') 
 
-# This function will grpah sepal width to petal length
+# This function will produce a scatter plot of sepal width to petal length
 def scatterSepWidPetLen():
     x = list(data1['Sepal Width (cm)'])
     y = list(data1['Petal Length (cm)'])
