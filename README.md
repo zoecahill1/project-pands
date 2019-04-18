@@ -75,7 +75,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 ## Box Plots
 <p>We will first look at how spread out these values are. To do this we can generate a box plot.
 
-![Box Code](/res/genBox.JPG)</p>
+![Box Code](/images/genBox.JPG)</p>
 **note: for this graph the mData used is "melted" data.
 ![Melt Data](/images/melt.JPG)
  Melt() function is useful to massage a DataFrame into a format where one or more columns are identifier variables, while all other columns, considered measured variables, are unpivoted to the row axis, leaving just two non-identifier columns, variable and value [15]
