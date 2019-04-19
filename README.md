@@ -17,7 +17,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 2. Run command line.
 3. Navigate to where you have the files saved in your directory.
 4. Open start.py and follow instructions in comments to change function name.
-5. Type python followed by the start.py to run the program. All functions are in analysis.py and what they do is list above the first line as a comment.
+5. Type python followed by the start.py to run the program. All functions are in analysis.py and what they do is list above the first line as a comment. All functions in machine.py contain the machine learning code.
 
 ## What is Fisher's Iris Data Set?
 
