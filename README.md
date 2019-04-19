@@ -176,3 +176,5 @@ This repository contains my solutions to the Problem Set for the module Programm
 17. [Kaggle - scikit learn video](http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machine-learning-first-steps-with-the-iris-dataset/)
 18. [Machine Learning on Iris](https://diwashrestha.com/2017/09/18/machine-learning-on-iris/)
 19. [Seaborn - Swarm Plots](https://seaborn.pydata.org/generated/seaborn.swarmplot.html)
+20. [Graphviz user guide](https://graphviz.readthedocs.io/en/stable/manual.html)
+21. [Stackoverflow - plotting graph from dot file](https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file)

@@ -4,7 +4,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.externals import joblib
 from sklearn.datasets import load_iris
 import seaborn as sns
-from graphviz import Source
+from graphviz import Source # https://graphviz.readthedocs.io/en/stable/manual.html
 
 def decisionTree():
     iris = sns.load_dataset("iris")
@@ -35,6 +35,7 @@ def decisionTree():
     print ('Accuracy Score')
     print (accuracy_score(y_test, y_pred)* 100)
 
+# https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file
 def view():
     path = 'res/iris.dot'
     s = Source.from_file(path)
