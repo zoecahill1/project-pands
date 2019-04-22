@@ -8,7 +8,7 @@ def main():
     #analysis.readData()
     #analysis.scatterPetal()
 
-    machine.decisionTree()
-
+    #machine.decisionTree()
+    machine.kknTest()
 if __name__ == "__main__":
     main()

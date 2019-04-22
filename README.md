@@ -41,7 +41,11 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 1. [Pandas](https://pandas.pydata.org/) -  an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools.
 2. [Seaborn](https://seaborn.pydata.org/) - is a python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
-3. [Matplotlib](https://matplotlib.org/) - is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms</p>
+3. [Matplotlib](https://matplotlib.org/) - is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms
+4. [Graphviz](https://graphviz.readthedocs.io/en/stable/manual.html) Graphviz provides a simple pure-Python interface for the Graphviz graph-drawing software. To install this package with anaconda run: conda install -c anaconda graphviz 
+5. [numpy](https://www.numpy.org/)NumPy is the fundamental package for scientific computing with Python. It contains among other things; a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, useful linear algebra, Fourier transform, and random number capabilities
+6. [sklearn](https://scikit-learn.org/stable/) is a machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests,gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.
+
 
 <p>Next step is to import the dataset:
 
@@ -178,3 +182,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 19. [Seaborn - Swarm Plots](https://seaborn.pydata.org/generated/seaborn.swarmplot.html)
 20. [Graphviz user guide](https://graphviz.readthedocs.io/en/stable/manual.html)
 21. [Stackoverflow - plotting graph from dot file](https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file)
+22. [KKN - Iris Dataset](https://www.kaggle.com/nautna/iris-knn-python-classification)
