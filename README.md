@@ -183,3 +183,4 @@ This repository contains my solutions to the Problem Set for the module Programm
 20. [Graphviz user guide](https://graphviz.readthedocs.io/en/stable/manual.html)
 21. [Stackoverflow - plotting graph from dot file](https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file)
 22. [KKN - Iris Dataset](https://www.kaggle.com/nautna/iris-knn-python-classification)
+23. [Scikit-learn estimator object](https://scikit-learn.org/stable/tutorial/statistical_inference/settings.html)

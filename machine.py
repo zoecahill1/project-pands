@@ -72,6 +72,7 @@ def kknTest():
     # This varibale is setting the estimator object. 
     # An estimator is any object that learns from data; it may be a classification, 
     # regression or clustering algorithm or a transformer that extracts/filters useful features from raw data.
+    # https://scikit-learn.org/stable/tutorial/statistical_inference/settings.html
     knn = KNeighborsClassifier(n_neighbors=1)
 
     # Then we fit the model with the training set in order to predict classes
