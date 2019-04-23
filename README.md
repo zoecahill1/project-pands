@@ -25,7 +25,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Ronald Fisher](/images/RFisher.JPG)
 
-<p>This data set has 150 objects of 3 different classes and 4 features. The 3 different classes of different species of the North American *Iris* flower *Iris setosa, I. virginica* and *I. ersicolor*.[1] It has 50 numeric values for each of the 3 species (in cm); 
+<p>This data set has 150 objects of 3 different classes and 4 features. The 3 different classes of different species of the North American Iris flower Iris setosa, I. virginica and I. ersicolor.[1] It has 50 numeric values for each of the 3 species (in cm); 
 
 1. sepal length 
 2. sepal width 
@@ -37,14 +37,14 @@ This repository contains my solutions to the Problem Set for the module Programm
 <p>Because it was one of the first widely available and high profile ‘real data’ sets, it’s use increased hugely as a teaching resource for statistics.  It is very often used today for testing out machine learning and visualizations (for example scatter plots).[2] </p>
 
 ## Starting the investigation
-<p>In order to look at fishers iris data set we must first import the various libraries needed to visualise and investigate the data. The libraries used in this project are; pandas, seaborn and matplotlib 
+<p>In order to look at fishers iris data set we must first import the various libraries needed to visualise and investigate the data. The libraries used in this project are; pandas, seaborn, matplotlib, graphviz, numpy and sklearn.
 
 1. [Pandas](https://pandas.pydata.org/) -  an open source, BSD-licensed library providing high-performance, easy-to-use data structures and data analysis tools.
 2. [Seaborn](https://seaborn.pydata.org/) - is a python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
 3. [Matplotlib](https://matplotlib.org/) - is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms
-4. [Graphviz](https://graphviz.readthedocs.io/en/stable/manual.html) Graphviz provides a simple pure-Python interface for the Graphviz graph-drawing software. To install this package with anaconda run: conda install -c anaconda graphviz 
-5. [numpy](https://www.numpy.org/)NumPy is the fundamental package for scientific computing with Python. It contains among other things; a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, useful linear algebra, Fourier transform, and random number capabilities
-6. [sklearn](https://scikit-learn.org/stable/) is a machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests,gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.
+4. [Graphviz](https://graphviz.readthedocs.io/en/stable/manual.html) - Graphviz provides a simple pure-Python interface for the Graphviz graph-drawing software. To install this package with anaconda run: conda install -c anaconda graphviz 
+5. [numpy](https://www.numpy.org/) - NumPy is the fundamental package for scientific computing with Python. It contains among other things; a powerful N-dimensional array object, sophisticated (broadcasting) functions, tools for integrating C/C++ and Fortran code, useful linear algebra, Fourier transform, and random number capabilities
+6. [sklearn](https://scikit-learn.org/stable/) - is a machine learning library for the Python programming language. It features various classification, regression and clustering algorithms including support vector machines, random forests,gradient boosting, k-means and DBSCAN, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.
 
 
 <p>Next step is to import the dataset:
@@ -59,7 +59,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![First entries](/images/headTable.JPG)</p>
 
-<p>As we can see the first 4 variables are measurements in centimeters. All of these flowers were measured in the same location, the same instrument to measure and all taken by the same person so they are consistent. This data was used by Fisher to see if he could identify the type of flower only by taking measurement of the sepals or petals. It must be useful for us to see exactly what sepals and petals are so have a look at this diagram:
+<p>As we can see the first 4 variables are measurements in centimeters. All of these flowers were measured in the same location, the same instrument to measure and all taken by the same person so they are consistent. This data was used by Fisher to see if he could identify the type of flower only by taking measurement of the sepals or petals.[2] It must be useful for us to see exactly what sepals and petals are so have a look at this diagram:
 
 ![Petals/Sepal Diagram](/images/petal_sepal_label.png) </p>
 
@@ -74,7 +74,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Summary](/images/table.JPG)
 
-<p>From this table the biggest observation we can see is that there is huge variance in the speal length and petal length. Next we will look at boxplots and scatter plots to actually visualise the data</p>
+<p>From this table the biggest observation we can see is that there is huge variance in the speal length and petal length. Next we will look at boxplots and scatter plots to actually visualise the data.</p>
 
 ## Box Plots
 <p>We will first look at how spread out these values are. To do this we can generate a box plot.
@@ -86,7 +86,9 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![General Box Plot](/res/genBoxPlot.jpg)
 
-<p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages. We will next look further into the dataset grouping by the specific flowers in the dataset.</p>
+<p>Sepal length and width seem to be spread fairly evenly amongst their own averages. In comparsion petal lengths and width are far more spread out with alot more values below the averages.</p> 
+
+<p>Next, we will look further into the dataset grouping by the specific flowers in the dataset.</p>
 
 ![Box Code](/images/boxM.JPG)
 
@@ -112,7 +114,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 <p>From this graph we can see that the setosa seems to have the most distinct features compared to the other two flowers. The setosa also by far has the largest petals (in both width and length). Versicolor and virgincia seem to overlap quite a bit in sepal length and width. There appears to be more of a difference between the two in petal length and width.</p>
 
 ## Swarm Plot
-<p>Another good way to get an overview of the data is with a swarm plot. A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution.</p>
+<p>Another good way to get an overview of the data is with a swarm plot. A swarm plot can be drawn on its own, but it is also a good complement to a box or violin plot in cases where you want to show all observations along with some representation of the underlying distribution.[19]</p>
 
 ![Swarm Code](/images/swarm.JPG)
 
@@ -123,7 +125,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 <p>We can clearly see here that Iris-virginica is the largest flower as it is a the top or nearly the top in each swarm. Also we can see petals have a much bigger difference between then as opposed to the speal measurements.</p>
 
 ## Pair Plot
-<p>Next we will try to take a look at how some of these variables interact. An easy way to get a good overview of this is with a pairplot</p>
+<p>Next we will try to take a look at how some of these variables interact. An easy way to get a good overview of this is with a pairplot:</p>
 
 ![Pair Plot Code](/images/pair.JPG)
 
@@ -131,14 +133,14 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 ![Pair Plot](/res/pairplot.jpg)
 
-<p>Let's look a little but closer a some of these scatter plots</p>
+<p>Let's look a little but closer a some of these scatter plots.</p>
 
 ## Scatter Plots
-<p>Firstly we will look at whether there is any relationship between sepal length and width. Coding this was a little tricky. I had to create a colourmap to make the graph readable and then maunally make a legend rather than have the computer generate one [12]</p>
+<p>Firstly we will look at whether there is any relationship between sepal length and width. Coding this was a little tricky. I had to create a colourmap to make the graph readable and then maunally make a legend rather than have the computer generate one.[12]</p>
 
 ![Scatter Sepal Code](/images/scatterSepal.JPG)
 
-<p>Look at the scatter plots we can make some observations about the data</p>
+<p>Looking at the scatter plots we can make some observations about the data</p>
 
 ![Scatter Speal](/res/scatterSepal.jpg)
 
@@ -158,7 +160,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>From what we have learned thus far about our data, this dataset has shown to be a good candidate for machine learning. In this section I will attempt to do some machine learning on this dataset. I will look at two algorithims to make predictions; Decision trees and K-means clustering. This is my first attempt at using this software so I won't be delving too much into the specifics of each algorithim. I have relied solely on online tutorials and doumentation for this portion of the project [16, 17, 18, 22] </p>
 
-<p>The first step in machine learning is to split the code into 2 parts. The first is for training the algorithinm and the other is for testing to see how accurate it is. </p>
+<p>The first step in machine learning is to split the code into 2 parts. The first is for training the algorithinm and the other is for testing to see how accurate it is.[22] </p>
 
 ![Split Data Code](/images/splitData.JPG)
 
@@ -168,11 +170,11 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>We want the algorithim to learn how to pick out patterns in the data. But in the real world we want it to look at all species of Iris not just the ones in this particular dataset. There could be patterns among the 150 specimens that are specific to this dataset, that may not apply to all species of Iris. This is part of the reason why we split up the data. This also allows us to test the accuracy of the algorithim, which is very important as it is a big factor when choosing which algorithim to use.[16]</p>
 
-<p>So firstly we will look at decision trees. In the simplest terms a decision tree generates rules on how to classify the data. It has different paths to follow depending on if certain conditions are true or false.[18]</p>
+<p>So the first algorithim we are going to look at is decision trees. In the simplest terms a decision tree generates rules on how to classify the data. It has different paths to follow depending on if certain conditions are true or false.[18]</p>
 
 ![Decision Tree Code](/images/decisionTree.JPG)
 
-<p>Next we can use the graphviz application to visualise the tree</p>
+<p>Next we can use the graphviz application to visualise the tree.[20, 21]</p>
 
 ![View Tree](/images/viewDecision.JPG)
 
@@ -183,7 +185,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>So as you can see the program will work its way down through the trees until it reaches a classification for each flower. For example you can see the easiest flower to classify is the setosa (which we knew from our earlier investigation!). Following the tree if the petal length is <= 2.5cm then it is a setosa, if not it will move to the next branch and so on until it is classified. </p>
 
-<p>Next we want to look at the accuracy of the algorithim.</p>
+<p>Next we want to look at the accuracy of the algorithim.[17, 18]</p>
 
 ![Tree Accuracy](/images/accuracyTree.JPG)
 
@@ -191,7 +193,7 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>The decision tree algorithim has 93% accuracy which is quite good. But there are still going to be some errors. Lets take a look at k-NN clustering to see if that is more accurate.</p>
 
-<p>kNN clustering (where NN stands for nearest neighbours) will generate groups of clusters that will be sorted based on the data available to the algorithim. Our clusters will be based on species which should work quite well based on the graphs we examined above.</p> 
+<p>kNN clustering (where NN stands for nearest neighbours) will generate groups of clusters that will be sorted based on the data available to the algorithim.[22] Our clusters will be based on species which should work quite well based on the graphs we examined above.</p> 
 
 ![Splitting the data](/images/trainSet.JPG)
 
