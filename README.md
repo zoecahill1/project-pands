@@ -154,11 +154,58 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>Examining the graph tells us that these two measurements increase together. Logically that must be true if they did not they would be very long thin petals, or else very short and wide petals. The graph also shows that this is a very good way to differinate between the different flowers</p>
 
+## Machine Learning
 
+<p>From what we have learned thus far about our data, this dataset has shown to be a good candidate for machine learning. In this section I will attempt to do some machine learning on this dataset. I will look at two algorithims to make predictions; Decision trees and K-means clustering. This is my first attempt at using this software so I won't be delving too much into the specifics of each algorithim. I have relied solely on online tutorials and doumentation for this portion of the project [16, 17, 18, 22] </p>
 
+<p>The first step in machine learning is to split the code into 2 parts. The first is for training the algorithinm and the other is for testing to see how accurate it is. </p>
 
+![Split Data Code](/images/splitData.JPG)
 
+<p>We can also see how the data is actually split aswell:</p>
 
+![How data is split](/images/splitDataBreakdown.JPG)
+
+<p>We want the algorithim to learn how to pick out patterns in the data. But in the real world we want it to look at all species of Iris not just the ones in this particular dataset. There could be patterns among the 150 specimens that are specific to this dataset, that may not apply to all species of Iris. This is part of the reason why we split up the data. This also allows us to test the accuracy of the algorithim, which is very important as it is a big factor when choosing which algorithim to use.[16]</p>
+
+<p>So firstly we will look at decision trees. In the simplest terms a decision tree generates rules on how to classify the data. It has different paths to follow depending on if certain conditions are true or false.[18]</p>
+
+![Decision Tree Code](/images/decisionTree.JPG)
+
+<p>Next we can use the graphviz application to visualise the tree</p>
+
+![View Tree](/images/viewDecision.JPG)
+
+<p>Then we can actually have a look at the decision tree generated: </p>
+
+![Decision Tree](/res/iris.dot.pdf)
+
+<p>So as you can see the program will work its way down through the trees until it reaches a classification for each flower. For example you can see the easiest flower to classify is the setosa (which we knew from our earlier investigation!). Following the tree if the petal length is <= 2.5cm then it is a setosa, if not it will move to the next branch and so on until it is classified. </p>
+
+<p>Next we want to look at the accuracy of the algorithim.</p>
+
+![Tree Accuracy](/images/accuracyTree.JPG)
+
+![Tree Result](/images/scoreTree.JPG)
+
+<p>The decision tree algorithim has 93% accuracy which is quite good. But there are still going to be some errors. Lets take a look at k-NN clustering to see if that is more accurate.</p>
+
+<p>kNN clustering (where NN stands for nearest neighbours) will generate groups of clusters that will be sorted based on the data available to the algorithim. Our clusters will be based on species which should work quite well based on the graphs we examined above.</p> 
+
+![Splitting the data](/images/trainSet.JPG)
+
+<p>kNN will use the training data to set the clusters, and it uses the data from the training to decide on where the test data will be sorted [16, 18, 22]</p>
+
+![kNN Code](/images/knnCode.JPG)
+
+<p>This code will generate a table of predictions based on our test data so we can actually see how the algorithim is sorting the data</p>
+
+![kNN table](/images/knnTable.JPG)
+
+<p>So this algorithim is more accurate than the previous with accuracy of 97%. The only time if failed according to the table (last entry in table) was between a versicolor and virginica which as we had seen from the scatterplots earlier overlapped on some of these features. So clearly the algorithim will fail if the features are very close together.</p>
+
+## Conclusion
+<p>From a simple data set we can learn so much about these flowers! Not only did we learn about trends and patterns as shown by the earlier exploration of the data such as summarising the general stastical data and the various graphs and plots generated. But also the real world application of machine learning and how this dataset could be used to predict the species of other flowers based solely on their petal and sepal measurements. Looking at the two algorithims they only failed when the specimens were too close to each other. But the majority of the time they were correctly able to identify the species. It just shows how powerful these tools can be when working with datasets.</p>
 
 ## References
 1. [UC Irvine Machine Learning Repository: Iris data set](https://archive.ics.uci.edu/ml/datasets/iris)

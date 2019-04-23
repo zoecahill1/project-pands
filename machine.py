@@ -50,11 +50,8 @@ def decisionTree():
 # Function to view the dot file in graphviz
 # Adapted from: https://stackoverflow.com/questions/41942109/plotting-the-digraph-with-graphviz-in-python-from-dot-file
 def view():
-    # declaring the file path
     path = 'res/iris.dot'
-    # setting the file path variable
     s = Source.from_file(path)
-    # viewing the file
     s.view()
 
 # Function to test using kk-N algorithim
