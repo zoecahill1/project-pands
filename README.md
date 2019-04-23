@@ -178,7 +178,8 @@ This repository contains my solutions to the Problem Set for the module Programm
 
 <p>Then we can actually have a look at the decision tree generated: </p>
 
-![Decision Tree](/res/iris.dot.pdf)
+![Decision Tree1](/images/tree1.JPG)
+![Decision Tree1](/images/tree2.JPG)
 
 <p>So as you can see the program will work its way down through the trees until it reaches a classification for each flower. For example you can see the easiest flower to classify is the setosa (which we knew from our earlier investigation!). Following the tree if the petal length is <= 2.5cm then it is a setosa, if not it will move to the next branch and so on until it is classified. </p>
 
